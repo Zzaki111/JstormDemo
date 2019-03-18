@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans.xsd    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <context:component-scan base-package="com.ai.aif.osp.jstorm"/>
+    <bean id ="OspContext" class="com.ai.aif.osp.jstorm.util.OspContext"></bean>
+
+
+    <!--多数据源类型配置，对应各mapper.xml中databaseId的设置，mysql\oracle-->
+    <!--<bean id = "vendorProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">-->
+        <!--<property name="properties">-->
+            <!--<props>-->
+                <!--<prop key="Oracle">oracle</prop>-->
+                <!--<prop key="MySQL">mysql</prop>-->
+            <!--</props>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--<bean id="databaseIdProvider" class="org.apache.ibatis.mapping.VendorDatabaseIdProvider">-->
+        <!--<property name="properties" ref="vendorProperties"/>-->
+    <!--</bean>-->
+</beans>
